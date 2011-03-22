@@ -1,0 +1,6 @@
+app/cache/*
+app/logs/*
+app/data
+app/deploy.sh
+app/alive.php
+app/phpunit.xml
