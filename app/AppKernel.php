@@ -1,7 +1,7 @@
 <?php
-
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\Component\DependencyInjection\Loader\LoaderInterface;
+//use Symfony\Component\DependencyInjection\Loader\LoaderInterface;
+use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
@@ -14,12 +14,13 @@ class AppKernel extends Kernel
             // enable third-party bundles
             new Symfony\Bundle\ZendBundle\ZendBundle(),
             new Symfony\Bundle\DoctrineBundle\DoctrineBundle(),
-            new Symfony\Bundle\DoctrineMigrationsBundle\DoctrineMigrationsBundle(),
+//            new Symfony\Bundle\DoctrineMigrationsBundle\DoctrineMigrationsBundle(),
 
             // register your bundles here
             new Knplabs\MenuBundle\KnplabsMenuBundle(),
 
             // register your applications here
+	   new Synergie\MeetingBundle\MeetingBundle()
         );
 
         if ($this->isDebug()) {
