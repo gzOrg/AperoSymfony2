@@ -1,0 +1,6 @@
+homepage:
+    pattern: /
+    defaults: { _controller: MeetingBundle:Meeting:index }
+
+meeting:
+    resource: "@MeetingBundle/Resources/config/routing.yml"
