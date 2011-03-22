@@ -18,16 +18,23 @@ twig:
     strict_variables: %kernel.debug%
 
 ## Doctrine Configuration
-#doctrine:
-#   dbal:
-#       dbname:   xxxxxxxx
-#       user:     xxxxxxxx
-#       password: ~
-#       logging:  %kernel.debug%
-#   orm:
-#       auto_generate_proxy_classes: %kernel.debug%
-#       mappings:
-#           MeetingBundle: ~
+doctrine:
+   dbal:
+      connections:
+         default:
+           dbname:   sy_meeting_symfony
+           host:     optimus
+           driver:   pdo_mysql
+           user:     root
+           password: plout
+           logging:  %kernel.debug%
+   orm:
+        default_entity_manager: default
+        auto_generate_proxy_classes: %kernel.debug%
+        entity_managers:
+          default:
+              mappings:
+                 MeetingBundle: ~
 
 ## Swiftmailer Configuration
 #swiftmailer:
